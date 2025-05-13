@@ -48,8 +48,8 @@ Se você deseja visualizar o código-fonte do portfólio ou contribuir com melho
 Se você estiver interessado(a) em trabalhar comigo ou quiser discutir uma colaboração, não hesite em entrar em contato! Aqui estão as maneiras de me encontrar:
 
 - **Email**: [contato@badoco.dev.br](mailto:contato@badoco.dev.br)
-- **LinkedIn**: [Seu LinkedIn](link-do-linkedin)
-- **GitHub**: [Seu GitHub]([link-do-github](https://github.com/FelipeBadoco))
+- **LinkedIn**: [Perfil](https://www.linkedin.com/in/felipe-badoco/)
+- **GitHub**: [Link](https://github.com/FelipeBadoco)
 
 ## **Contribuições**
 
