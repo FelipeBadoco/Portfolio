@@ -32,6 +32,7 @@ companyDivs.forEach(div => {
 
         // Adiciona a classe 'selected' à div clicada
         this.classList.add('selected');
+        updateExperience('digitaljundiai');
 
         // Altera o texto e estilos com base na classe da div clicada
         if (this.classList.contains('digitaljundiai')) {
@@ -49,3 +50,4 @@ companyDivs.forEach(div => {
         }
     });
 });
+
