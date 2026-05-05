@@ -7,9 +7,9 @@
       const backToTopButton = document.querySelector(".back-to-top");
       window.addEventListener("scroll", () => {
         if (window.pageYOffset > 300) { 
-          backToTopButton.style.display = "block";
+          backToTopButton.classList.add("show");
         } else {
-          backToTopButton.style.display = "none";
+          backToTopButton.classList.remove("show");
         }
       });
 
@@ -44,4 +44,48 @@
 
       window.addEventListener("scroll", updateActiveNav);
       updateActiveNav();
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Theme toggle logic
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = themeToggle.querySelector("i");
+      const body = document.body;
+
+      // Check for saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        body.classList.add("light-theme");
+        themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        
+        if (body.classList.contains("light-theme")) {
+          localStorage.setItem("theme", "light");
+          themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
+        } else {
+          localStorage.setItem("theme", "dark");
+          themeIcon.classList.replace("bi-sun-fill", "bi-moon-stars-fill");
+        }
+      });
     });
+
+    // Global slide function for carousels
+    function slide(containerId, direction) {
+      const container = document.getElementById(containerId);
+      const scrollAmount = container.offsetWidth * 0.8; // Slide 80% of the view width
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
